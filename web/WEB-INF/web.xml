@@ -35,4 +35,32 @@
         <servlet-name>servletEx</servlet-name>
         <url-pattern>/jspEx.jsp</url-pattern>
     </servlet-mapping>
+
+    <!-- servlet 데이터 공유 config 객체 -->
+    <servlet>
+        <servlet-name>servletEx2</servlet-name>
+        <servlet-class>servlet.ServletEx</servlet-class>
+        <init-param>
+            <param-name>adminId</param-name>
+            <param-value>admin</param-value>
+        </init-param>
+        <init-param>
+            <param-name>adminPw</param-name>
+            <param-value>1234</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletEx2</servlet-name>
+        <url-pattern>/se</url-pattern>
+    </servlet-mapping>
+
+    <!-- servlet 데이터 공유 application 객체 -->
+    <context-param>
+        <param-name>imgDir2</param-name>
+        <param-value>/upload/img</param-value>
+    </context-param>
+    <context-param>
+        <param-name>testServerIP2</param-name>
+        <param-value>127.0.0.1</param-value>
+    </context-param>
 </web-app>
